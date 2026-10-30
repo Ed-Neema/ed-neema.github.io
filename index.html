@@ -11,228 +11,246 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
-  <header class="top">
-    <div class="wrap">
-      <a class="mark" href="#"><span class="mark-dot" aria-hidden="true"></span>Ednah Akoth</a>
-      <div class="top-right">
-        <nav class="nav" aria-label="Sections">
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#questions">Questions</a>
-          <a class="keep" href="#writing">Writing</a>
-        </nav>
-        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle>
-          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-        </button>
-      </div>
+  <header class="bar">
+    <div class="shell bar-inner">
+      <a class="mark" href="#about"><span class="mark-dot" aria-hidden="true"></span>Ednah Akoth</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero" aria-label="Introduction">
-      <div class="hero-text">
-        <h1 class="hero-name">Ednah Neema Akoth</h1>
-        <p class="hero-role">LLM Engineering Research Assistant, Carnegie Mellon University Africa, Kigali</p>
-        <p class="hero-interests">I work on AI safety and AI policy, the safety of coding agents, and medical NLP, and I am drawn to the places where AI meets software engineering. I also like designing systems.</p>
-        <ul class="links">
-          <li><a href="mailto:ednahakoth21@gmail.com">Email</a></li>
-          <li><a href="https://github.com/Ed-Neema">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/ednah-akoth-7515a0207/">LinkedIn</a></li>
-        </ul>
-      </div>
+  <div class="shell layout">
+    <aside class="profile" aria-label="Profile">
       <figure class="portrait">
         <span class="portrait-fallback" aria-hidden="true">EA</span>
         <!-- To add your photo: upload it to the repository as photo.jpg. It appears here automatically. -->
-        <img src="photo.jpg" alt="Portrait of Ednah Akoth" width="600" height="750" onerror="this.remove()">
+        <img src="photo.jpg" alt="Portrait of Ednah Akoth" width="400" height="400" onerror="this.remove()">
       </figure>
-    </section>
+      <h1 class="profile-name">Ednah Neema Akoth</h1>
+      <p class="profile-role">LLM Engineering Research Assistant</p>
+      <p class="profile-org">Carnegie Mellon University Africa, Kigali</p>
 
-    <section class="section" id="about">
-      <h2>About</h2>
-      <div class="prose">
-        <p>Most AI safety work asks whether a model will refuse a harmful request. I am interested in a quieter failure: an agent given a harmless task that deletes a database, wipes a drive, or rewrites files nobody asked it to touch. I want agents whose actions stay proportionate to what was asked, and evidence that shows when they do not.</p>
-        <p>I also work on medical AI. Language models give health advice at enormous scale with no system to record when it goes wrong, and speech models can mishear a drug name or dose while their overall error rate barely moves. I design reporting systems, datasets and evaluations that make those failures visible.</p>
+      <ul class="contact">
+        <li>
+          <span class="chip-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <a href="mailto:ednahakoth21@gmail.com">ednahakoth21@gmail.com</a>
+        </li>
+        <li>
+          <span class="chip-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg></span>
+          <a href="https://github.com/Ed-Neema">GitHub</a>
+        </li>
+        <li>
+          <span class="chip-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></span>
+          <a href="https://www.linkedin.com/in/ednah-akoth-7515a0207/">LinkedIn</a>
+        </li>
+        <li>
+          <span class="chip-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <span>Kigali, Rwanda</span>
+        </li>
+      </ul>
+
+      <div class="interests">
+        <h2>Interests</h2>
+        <ul>
+          <li>AI safety</li>
+          <li>AI policy</li>
+          <li>Safety of coding agents</li>
+          <li>Medical NLP</li>
+          <li>AI and software engineering</li>
+          <li>Systems design</li>
+        </ul>
       </div>
-    </section>
+    </aside>
 
-    <section class="section" id="research">
-      <h2>Research</h2>
-      <ol class="projects">
-        <li class="project">
-          <span class="project-when">2025 to now</span>
-          <div class="project-body">
-            <h3>Proportional action in tool using agents</h3>
-            <p>How agents behave under ambiguity, risk and uncertainty, and inference time controls that keep their actions scoped to the task. I am building a benchmark that measures the changes an agent makes that the task did not require, scored by how reversible and how disproportionate they are.</p>
-            <p class="project-tags"><span class="tag">AI safety</span><span class="tag">coding agents</span><span class="tag">evaluation</span></p>
-          </div>
-        </li>
-        <li class="project">
-          <span class="project-when">2025 to 2026</span>
-          <div class="project-body">
-            <h3>A reporting system for medical harms from LLM advice</h3>
-            <p>A proposed system for recording and analysing harms linked to medical advice from general purpose language models, combining a harm taxonomy, a tiered privacy model, a data architecture and an analysis of the regulatory gap.</p>
-            <p class="project-tags"><span class="tag">AI policy</span><span class="tag">medical NLP</span></p>
-            <a class="project-link" href="#pub-no-one-is-counting">Read the paper</a>
-          </div>
-        </li>
-        <li class="project">
-          <span class="project-when">2026 to now</span>
-          <div class="project-body">
-            <h3>BantuMed</h3>
-            <p>A medical speech dataset and benchmark in Kinyarwanda, Swahili, Kirundi and Luganda, built from simulated clinician and patient consultations. It separates overall accuracy from errors that change clinical meaning, such as medication names, doses, symptoms and negation.</p>
-            <p class="project-tags"><span class="tag">medical NLP</span><span class="tag">speech</span><span class="tag">datasets</span></p>
-          </div>
-        </li>
-        <li class="project">
-          <span class="project-when">2026</span>
-          <div class="project-body">
-            <h3>Does retrieval help LLMs diagnose?</h3>
-            <p>A controlled comparison of five retrieval setups on 60 MedQA cardiology questions. Hybrid retrieval gave the largest gain, single methods often hurt, and the reranker mainly guarded against bad retrievals. The differences were not yet significant at this sample size.</p>
-            <p class="project-tags"><span class="tag">medical NLP</span><span class="tag">retrieval</span></p>
-            <a class="project-link" href="https://drive.google.com/file/d/1j5AnAswtlGLkLndNqXd56vwvSivkVSa7/view?usp=sharing">Read the report</a>
-          </div>
-        </li>
-        <li class="project">
-          <span class="project-when">2025</span>
-          <div class="project-body">
-            <h3>A data lake for a digital agriculture platform</h3>
-            <p>A change data capture pipeline streaming updates from microservice databases through Kafka into S3 with Delta Lake, for real time analytics on pest diagnosis and soil lab services.</p>
-            <p class="project-tags"><span class="tag">systems design</span><span class="tag">data engineering</span></p>
-          </div>
-        </li>
-      </ol>
-    </section>
+    <main class="main">
+      <nav class="tabs" aria-label="Sections">
+        <a href="#about" data-tab="about">About</a>
+        <a href="#research" data-tab="research">Research</a>
+        <a href="#publications" data-tab="publications">Publications</a>
+        <a href="#writing" data-tab="writing">Writing</a>
+        <a href="#questions" data-tab="questions">Questions</a>
+        <a href="#experience" data-tab="experience">Experience</a>
+      </nav>
 
-    <section class="section" id="publications">
-      <h2>Publications</h2>
-      <ol class="pubs" id="pubs">
-        <li><p class="empty">Loading publications.</p></li>
-      </ol>
-    </section>
+      <section class="panel" id="panel-about" data-panel="about" aria-labelledby="h-about">
+        <h2 class="panel-title" id="h-about">About</h2>
+        <div class="prose">
+          <p class="lead">I work on AI safety and AI policy, the safety of coding agents, and medical NLP, and I am drawn to the places where AI meets software engineering. I also like designing systems.</p>
+          <p>Most AI safety work asks whether a model will refuse a harmful request. I am interested in a quieter failure: an agent given a harmless task that deletes a database, wipes a drive, or rewrites files nobody asked it to touch. I want agents whose actions stay proportionate to what was asked, and evidence that shows when they do not.</p>
+          <p>I also work on medical AI. Language models give health advice at enormous scale with no system to record when it goes wrong, and speech models can mishear a drug name or dose while their overall error rate barely moves. I design reporting systems, datasets and evaluations that make those failures visible.</p>
+        </div>
+        <div class="glance">
+          <a class="glance-item" href="#publications">
+            <span class="glance-label">Latest paper</span>
+            <span class="glance-text">No One Is Counting, submitted to Nature</span>
+          </a>
+          <a class="glance-item" href="#writing">
+            <span class="glance-label">Latest writing</span>
+            <span class="glance-text" id="latest-post">Loading</span>
+          </a>
+          <a class="glance-item" href="#research">
+            <span class="glance-label">Now building</span>
+            <span class="glance-text">A benchmark for agents that do more than the task needs</span>
+          </a>
+        </div>
+      </section>
 
-    <section class="section" id="questions">
-      <h2>Questions I am thinking about</h2>
-      <div class="questions" id="question-list">
-        <p class="empty">Loading questions.</p>
-      </div>
-    </section>
+      <section class="panel" id="panel-research" data-panel="research" aria-labelledby="h-research" hidden>
+        <h2 class="panel-title" id="h-research">Research</h2>
+        <ol class="cards">
+          <li class="card">
+            <p class="card-kind">Agent safety <span class="card-when">2025 to now</span></p>
+            <h3 class="card-title">Proportional action in tool using agents</h3>
+            <p class="card-text">How agents behave under ambiguity, risk and uncertainty, and inference time controls that keep their actions scoped to the task. I am building a benchmark that measures the changes an agent makes that the task did not require, scored by how reversible and how disproportionate they are.</p>
+            <p class="tags"><span class="tag">AI safety</span><span class="tag">coding agents</span><span class="tag">evaluation</span></p>
+          </li>
+          <li class="card">
+            <p class="card-kind">AI policy <span class="card-when">2025 to 2026</span></p>
+            <h3 class="card-title">A reporting system for medical harms from LLM advice</h3>
+            <p class="card-text">A proposed system for recording and analysing harms linked to medical advice from general purpose language models, combining a harm taxonomy, a tiered privacy model, a data architecture and an analysis of the regulatory gap.</p>
+            <p class="tags"><span class="tag">AI policy</span><span class="tag">medical NLP</span></p>
+            <p class="actions"><a href="#pub-no-one-is-counting">Read the paper</a></p>
+          </li>
+          <li class="card">
+            <p class="card-kind">Medical NLP <span class="card-when">2026 to now</span></p>
+            <h3 class="card-title">BantuMed</h3>
+            <p class="card-text">A medical speech dataset and benchmark in Kinyarwanda, Swahili, Kirundi and Luganda, built from simulated clinician and patient consultations. It separates overall accuracy from errors that change clinical meaning, such as medication names, doses, symptoms and negation.</p>
+            <p class="tags"><span class="tag">medical NLP</span><span class="tag">speech</span><span class="tag">datasets</span></p>
+          </li>
+          <li class="card">
+            <p class="card-kind">Medical NLP <span class="card-when">2026</span></p>
+            <h3 class="card-title">Does retrieval help LLMs diagnose?</h3>
+            <p class="card-text">A controlled comparison of five retrieval setups on 60 MedQA cardiology questions. Hybrid retrieval gave the largest gain, single methods often hurt, and the reranker mainly guarded against bad retrievals. The differences were not yet significant at this sample size.</p>
+            <p class="tags"><span class="tag">medical NLP</span><span class="tag">retrieval</span></p>
+            <p class="actions"><a href="https://drive.google.com/file/d/1j5AnAswtlGLkLndNqXd56vwvSivkVSa7/view?usp=sharing">Read the report</a></p>
+          </li>
+          <li class="card">
+            <p class="card-kind">Systems design <span class="card-when">2025</span></p>
+            <h3 class="card-title">A data lake for a digital agriculture platform</h3>
+            <p class="card-text">A change data capture pipeline streaming updates from microservice databases through Kafka into S3 with Delta Lake, for real time analytics on pest diagnosis and soil lab services.</p>
+            <p class="tags"><span class="tag">systems design</span><span class="tag">data engineering</span></p>
+          </li>
+        </ol>
+      </section>
 
-    <section class="section" id="writing">
-      <h2>Writing</h2>
-      <div>
+      <section class="panel" id="panel-publications" data-panel="publications" aria-labelledby="h-publications" hidden>
+        <div class="panel-head">
+          <h2 class="panel-title" id="h-publications">Publications <span class="count" id="pub-count"></span></h2>
+        </div>
+        <ol class="cards" id="pubs">
+          <li><p class="empty">Loading publications.</p></li>
+        </ol>
+      </section>
+
+      <section class="panel" id="panel-writing" data-panel="writing" aria-labelledby="h-writing" hidden>
+        <div class="panel-head">
+          <h2 class="panel-title" id="h-writing">Writing <span class="count" id="post-count"></span></h2>
+          <label class="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <span class="visually-hidden">Search posts by title</span>
+            <input type="search" id="post-search" placeholder="Search by title">
+          </label>
+        </div>
         <ul class="filters" id="filters" aria-label="Filter posts by tag"></ul>
-        <ol class="posts" id="posts">
+        <ol class="cards" id="posts">
           <li><p class="empty">Loading posts.</p></li>
         </ol>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" id="experience">
-      <h2>Experience</h2>
-      <ol class="rows">
-        <li class="row">
-          <details>
-            <summary class="row-head">
-              <span class="row-title">LLM Engineering Research Assistant</span>
-              <span class="row-org">Carnegie Mellon University Africa, Kigali</span>
-              <span class="row-date">Aug 2025 – now</span>
-              <span class="row-toggle" aria-hidden="true"></span>
-            </summary>
-            <div class="row-body">
-              <ul>
+      <section class="panel" id="panel-questions" data-panel="questions" aria-labelledby="h-questions" hidden>
+        <h2 class="panel-title" id="h-questions">Questions I am thinking about</h2>
+        <p class="panel-intro">Open problems I am working through and want to pursue. This list changes as my thinking does.</p>
+        <div class="questions" id="question-list">
+          <p class="empty">Loading questions.</p>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-experience" data-panel="experience" aria-labelledby="h-experience" hidden>
+        <h2 class="panel-title" id="h-experience">Experience</h2>
+        <ol class="timeline">
+          <li class="tl-item">
+            <span class="tl-date">Aug 2025 – now</span>
+            <div>
+              <h3 class="tl-title">LLM Engineering Research Assistant</h3>
+              <p class="tl-org">Carnegie Mellon University Africa, Kigali</p>
+              <ul class="tl-points">
                 <li>Developed a reporting framework for medical harms linked to LLM advice, integrating a harm taxonomy, privacy aware data architecture and legal analysis. Coauthored the manuscript submitted to Nature.</li>
                 <li>Investigating reasonable behaviour in tool using agents, turning analysis of failures under ambiguity, risk and uncertainty into inference time controls for safer actions.</li>
                 <li>Developing BantuMed, a multilingual African medical speech dataset and benchmark that identifies clinically consequential transcription errors.</li>
               </ul>
             </div>
-          </details>
-        </li>
-        <li class="row">
-          <details>
-            <summary class="row-head">
-              <span class="row-title">Software Engineering Research Assistant</span>
-              <span class="row-org">Carnegie Mellon University Africa, Kigali</span>
-              <span class="row-date">Jun – Aug 2025</span>
-              <span class="row-toggle" aria-hidden="true"></span>
-            </summary>
-            <div class="row-body">
-              <ul>
+          </li>
+          <li class="tl-item">
+            <span class="tl-date">Jun – Aug 2025</span>
+            <div>
+              <h3 class="tl-title">Software Engineering Research Assistant</h3>
+              <p class="tl-org">Carnegie Mellon University Africa, Kigali</p>
+              <ul class="tl-points">
                 <li>Designed and built a digital agriculture platform with pest and disease diagnosis, treatment recommendations, a chatbot and soil lab service requests.</li>
                 <li>Built AI features with Python, FastAPI and microservices across application and data components.</li>
                 <li>Built a data lake with a change data capture pipeline, streaming updates through Apache Kafka into AWS S3 using Delta Lake.</li>
               </ul>
             </div>
-          </details>
-        </li>
-        <li class="row">
-          <details>
-            <summary class="row-head">
-              <span class="row-title">Graduate Teaching Assistant, Data Structures and Algorithms</span>
-              <span class="row-org">Carnegie Mellon University Africa, Kigali</span>
-              <span class="row-date">Jan – May 2025</span>
-              <span class="row-toggle" aria-hidden="true"></span>
-            </summary>
-            <div class="row-body">
-              <ul>
+          </li>
+          <li class="tl-item">
+            <span class="tl-date">Jan – May 2025</span>
+            <div>
+              <h3 class="tl-title">Graduate Teaching Assistant, Data Structures and Algorithms</h3>
+              <p class="tl-org">Carnegie Mellon University Africa, Kigali</p>
+              <ul class="tl-points">
                 <li>Led C++ recitations and coding labs. Average assignment scores rose 15%.</li>
                 <li>Held weekly office hours for 15 to 20 students and used assignment results to design targeted sessions.</li>
               </ul>
             </div>
-          </details>
-        </li>
-        <li class="row">
-          <details>
-            <summary class="row-head">
-              <span class="row-title">Full Stack Engineer</span>
-              <span class="row-org">Kayko, Kigali</span>
-              <span class="row-date">Mar – Oct 2024</span>
-              <span class="row-toggle" aria-hidden="true"></span>
-            </summary>
-            <div class="row-body">
-              <ul>
+          </li>
+          <li class="tl-item">
+            <span class="tl-date">Mar – Oct 2024</span>
+            <div>
+              <h3 class="tl-title">Full Stack Engineer</h3>
+              <p class="tl-org">Kayko, Kigali</p>
+              <ul class="tl-points">
                 <li>Led a team of three building a React and NestJS admin dashboard for monitoring user consumption.</li>
                 <li>Built and iterated on an inventory management platform for small businesses, reaching more than 2,000 users.</li>
               </ul>
             </div>
-          </details>
-        </li>
-      </ol>
-    </section>
+          </li>
+        </ol>
 
-    <section class="section" id="education">
-      <h2>Education</h2>
-      <ol class="rows">
-        <li class="row row-static">
-          <div class="row-head">
-            <span class="row-title">MS in Information Technology</span>
-            <span class="row-org">Carnegie Mellon University Africa, Kigali</span>
-            <span class="row-date">2024 – 2026</span>
-            <span class="row-note">Natural language processing, LLM applications, AI for engineers, human centered software, research methods</span>
-          </div>
-        </li>
-        <li class="row row-static">
-          <div class="row-head">
-            <span class="row-title">BSc in Computer Science, valedictorian</span>
-            <span class="row-org">African Leadership University, Kigali</span>
-            <span class="row-date">2021 – 2024</span>
-            <span class="row-note">Software engineering, cloud computing, user experience research, mobile development</span>
-          </div>
-        </li>
-      </ol>
-    </section>
-  </main>
+        <h2 class="panel-title sub" id="education">Education</h2>
+        <ol class="timeline">
+          <li class="tl-item">
+            <span class="tl-date">2024 – 2026</span>
+            <div>
+              <h3 class="tl-title">MS in Information Technology</h3>
+              <p class="tl-org">Carnegie Mellon University Africa, Kigali</p>
+              <p class="tl-note">Natural language processing, LLM applications, AI for engineers, human centered software, research methods</p>
+            </div>
+          </li>
+          <li class="tl-item">
+            <span class="tl-date">2021 – 2024</span>
+            <div>
+              <h3 class="tl-title">BSc in Computer Science, valedictorian</h3>
+              <p class="tl-org">African Leadership University, Kigali</p>
+              <p class="tl-note">Software engineering, cloud computing, user experience research, mobile development</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </main>
+  </div>
 
   <footer class="foot">
-    <div class="wrap">
+    <div class="shell foot-inner">
       <span>Ednah Akoth, Kigali</span>
-      <a href="#">Back to top</a>
+      <a href="#about">Back to top</a>
     </div>
   </footer>
 
-  <script src="main.js?v=2"></script>
+  <script src="main.js?v=4"></script>
 </body>
 </html>
