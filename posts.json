@@ -1,5 +1,18 @@
 [
   {
+    "slug": "evaluated-once-learning-forever",
+    "title": "Evaluated Once, Learning Forever: How the EU AI Act Handles Systems That Keep Changing",
+    "date": "2026-10-30",
+    "status": "published",
+    "tags": [
+      "AI policy",
+      "EU AI Act",
+      "evaluation",
+      "continual learning"
+    ],
+    "summary": "The AI Act checks a system before release. What happens when the system keeps learning from its users? A step by step look at the rules, and nine reasons they may not be enough."
+  },
+  {
     "slug": "three-kinds-of-safety",
     "title": "Three kinds of agent safety, and the one that keeps deleting databases",
     "date": "2026-11-08",
