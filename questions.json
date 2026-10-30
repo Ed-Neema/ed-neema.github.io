@@ -1,0 +1,38 @@
+[
+  {
+    "theme": "Agents that do more than they were asked",
+    "questions": [
+      "When an agent completes a harmless task, how do we measure the changes it made that the task did not need, and weigh them by how hard they are to undo?",
+      "Agents respect a scope boundary when it is spelled out, but rarely infer one on their own. What would it take for an agent to work out what it was not authorized to touch?",
+      "Is overreach mainly a model problem or a harness problem? Early evidence suggests the framework around a coding agent shapes its behaviour more than the model inside it."
+    ]
+  },
+  {
+    "theme": "Auditing and evidence",
+    "questions": [
+      "What concrete evidence should an independent auditor or regulator ask for before an agent is deployed, beyond a benchmark score?",
+      "Agent safety benchmarks disagree about which systems are safest. What would make an evaluation reliable enough to count as evidence?"
+    ]
+  },
+  {
+    "theme": "Evaluation when the system keeps changing",
+    "questions": [
+      "If a model keeps learning from users after deployment, what does it mean to say it was evaluated?",
+      "Regulation lets learning systems change within a plan agreed in advance. How would we show that a system has stayed inside that plan, especially for the kinds of actions an agent takes?"
+    ]
+  },
+  {
+    "theme": "Safety across languages",
+    "questions": [
+      "Does safety training done mostly in English still hold when an agent receives the same risky request in Kinyarwanda or Swahili?",
+      "Can a language model reliably judge safety in a low resource language, or does the judge become the weak point?"
+    ]
+  },
+  {
+    "theme": "Medical AI",
+    "questions": [
+      "How do we count harms from medical advice given by general purpose models when no reporting channel exists?",
+      "Which speech recognition errors in African clinical conversations actually change clinical meaning, and how should a benchmark weigh them against everything else?"
+    ]
+  }
+]

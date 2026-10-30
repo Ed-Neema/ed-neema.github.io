@@ -3,32 +3,46 @@
     "slug": "three-kinds-of-safety",
     "title": "Three kinds of agent safety, and the one that keeps deleting databases",
     "date": "2026-11-08",
-    "status": "upcoming",
-    "tags": ["agent safety", "evaluation"],
+    "status": "draft",
+    "tags": [
+      "agent safety",
+      "evaluation"
+    ],
     "summary": "Following instructions, refusing harm and avoiding catastrophic actions are different problems. Why a model can ace refusal benchmarks and still wipe your data."
   },
   {
     "slug": "agent-failures-proportional-action",
     "title": "Famous agent failures, read through proportional action",
     "date": "2026-11-15",
-    "status": "upcoming",
-    "tags": ["agent safety", "incidents"],
+    "status": "draft",
+    "tags": [
+      "agent safety",
+      "incidents"
+    ],
     "summary": "Scoring public agent incidents on irreversibility, proportionality, authorization and context. Most started with a harmless request."
   },
   {
     "slug": "what-did-the-agent-change",
     "title": "What did the agent change that it didn't need to?",
     "date": "2026-11-22",
-    "status": "upcoming",
-    "tags": ["agent safety", "experiment", "coding agents"],
+    "status": "draft",
+    "tags": [
+      "agent safety",
+      "experiment",
+      "coding agents"
+    ],
     "summary": "Twenty small tasks, one coding agent, and a git diff of everything it touched outside the task."
   },
   {
     "slug": "safety-in-kinyarwanda",
     "title": "Does English safety training hold up when the request is in Kinyarwanda?",
     "date": "2026-11-29",
-    "status": "upcoming",
-    "tags": ["multilingual", "experiment", "agent safety"],
+    "status": "draft",
+    "tags": [
+      "multilingual",
+      "experiment",
+      "agent safety"
+    ],
     "summary": "A small pilot: the same risky agent tasks in English and Kinyarwanda, and what the model refuses in each."
   }
 ]

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "no-one-is-counting",
+    "title": "No One Is Counting: Toward an Adverse Advice Reporting System for Medical Harms Linked to Large Language Models",
+    "authors": "Ednah N. Akoth, Prasenjit Mitra",
+    "venue": "Perspective",
+    "year": "2026",
+    "status": "Submitted to Nature",
+    "url": "https://drive.google.com/file/d/1p5dFlj7L9vb-34rcx8X_7IxwHmIyTTcZ/view",
+    "summary": "People ask language models for medical advice every day, but when that advice causes harm, nothing records it. This Perspective proposes a reporting system for those harms: a taxonomy of harms and near misses, a tiered privacy model for reporters, and a data architecture that turns scattered reports into safety signals regulators and developers can act on.",
+    "sections": [
+      { "id": "regulatory-gap", "title": "The regulatory gap", "page": 5 }
+    ]
+  }
+]
