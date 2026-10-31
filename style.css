@@ -60,6 +60,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+::selection { background: var(--brown); color: var(--surface); }
+
 a { color: inherit; text-decoration-color: var(--brown); text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
 a:hover { color: var(--brown); }
 :focus-visible { outline: 2px solid var(--brown); outline-offset: 3px; border-radius: 4px; }
@@ -153,7 +155,7 @@ a:hover { color: var(--brown); }
 .glance-label { font-size: 13px; color: var(--brown); font-weight: 500; }
 .glance-text { font-size: 15px; line-height: 1.4; }
 
-/* Cards: publications, writing, research */
+/* Cards: publications, blog, research */
 .cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .card {
   position: relative; padding: 18px 20px 18px 22px;
@@ -250,6 +252,12 @@ a.card-link:hover .card-title { color: var(--brown); }
 .article-body table { border-collapse: collapse; width: 100%; font-family: var(--sans); font-size: 0.9rem; margin: 1.4em 0; display: block; overflow-x: auto; }
 .article-body th, .article-body td { border-bottom: 1px solid var(--rule); padding: 8px 10px; text-align: left; vertical-align: top; }
 .article-body hr { border: 0; border-top: 1px solid var(--rule); margin: 2.4em 0; }
+
+/* Comments under a post */
+.comments { margin-top: 20px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: clamp(22px, 5vw, 56px); }
+.comments[hidden] { display: none; }
+.comments-title { margin: 0; font-size: 1.35rem; letter-spacing: -0.02em; font-weight: 600; }
+.comments-note { margin: 6px 0 22px; color: var(--mute); font-size: 14px; }
 
 /* One entrance, on page load only */
 @media (prefers-reduced-motion: no-preference) {

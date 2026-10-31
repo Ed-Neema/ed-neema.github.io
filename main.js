@@ -1,6 +1,6 @@
 // Site behaviour:
 // theme toggle, home page tabs, publications (publications.json), questions (questions.json),
-// the writing list with tag filters (posts.json), and single posts on post.html?p=<slug>.
+// the blog list with tag filters, comments through giscus (posts.json), and single posts on post.html?p=<slug>.
 
 (function () {
   "use strict";
@@ -49,6 +49,7 @@
         root.dataset.theme = next;
         try { localStorage.setItem("theme", next); } catch (e) {}
         label();
+        syncGiscusTheme();
       });
     });
     if (media && media.addEventListener) media.addEventListener("change", label);
@@ -73,6 +74,7 @@
       if (panel) return panel.dataset.panel;
       if (/^pub-/.test(id)) return "publications";
       if (id === "education") return "experience";
+      if (id === "writing") return "blog";
       return "about";
     }
 
@@ -99,6 +101,55 @@
   }
 
   var refreshTab = function () {};
+
+  /* Comments. They live in GitHub Discussions on the site repository, through giscus (giscus.app).
+     Leave repoId empty to switch comments off. */
+
+  var GISCUS = {
+    repo: "Ed-Neema/ed-neema.github.io",
+    repoId: "R_kgDOVdOX2A",
+    category: "Blog comments",
+    categoryId: "DIC_kwDOVdOX2M4DKEyC"
+  };
+
+  function giscusTheme() {
+    var t = document.documentElement.dataset.theme;
+    if (!t) t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    return t === "dark" ? "noborder_dark" : "noborder_light";
+  }
+
+  function syncGiscusTheme() {
+    var frame = document.querySelector("iframe.giscus-frame");
+    if (frame) frame.contentWindow.postMessage({ giscus: { setConfig: { theme: giscusTheme() } } }, "https://giscus.app");
+  }
+
+  function renderComments(slug) {
+    var box = document.getElementById("comments");
+    var mount = document.getElementById("comments-thread");
+    if (!box || !mount || !GISCUS.repoId || !GISCUS.categoryId) return;
+    var s = document.createElement("script");
+    var attrs = {
+      "src": "https://giscus.app/client.js",
+      "data-repo": GISCUS.repo,
+      "data-repo-id": GISCUS.repoId,
+      "data-category": GISCUS.category,
+      "data-category-id": GISCUS.categoryId,
+      "data-mapping": "specific",
+      "data-term": slug,
+      "data-strict": "1",
+      "data-reactions-enabled": "1",
+      "data-emit-metadata": "0",
+      "data-input-position": "top",
+      "data-theme": giscusTheme(),
+      "data-lang": "en",
+      "data-loading": "lazy",
+      "crossorigin": "anonymous"
+    };
+    for (var k in attrs) s.setAttribute(k, attrs[k]);
+    s.async = true;
+    mount.appendChild(s);
+    box.hidden = false;
+  }
 
   /* Papers and their sections. A section link opens the paper, at the right page when the link is a PDF. */
 
@@ -194,7 +245,7 @@
     });
   }
 
-  /* Writing list. Only posts with "status": "published" are shown. */
+  /* Blog list. Only posts with "status": "published" are shown. */
 
   function tagChips(tags) {
     var wrap = el("div", { class: "post-tags tags" });
@@ -325,11 +376,11 @@
       body.appendChild(el("p", null, msg));
     }
 
-    if (!slug) return fail("This link is missing a post name. Go back to the writing list to pick one.");
+    if (!slug) return fail("This link is missing a post name. Go back to the blog to pick one.");
 
     Promise.all([getJSON("posts.json"), getJSON("publications.json").catch(function () { return []; })]).then(function (res) {
       var p = res[0].filter(function (x) { return x.slug === slug && x.status === "published"; })[0];
-      if (!p) return fail("There is no published post at this address. Go back to the writing list to pick one.");
+      if (!p) return fail("There is no published post at this address. Go back to the blog to pick one.");
       document.title = p.title + " | Ednah Akoth";
       title.textContent = p.title;
       meta.innerHTML = "";
@@ -342,6 +393,7 @@
       }).then(function (md) {
         var html = window.marked ? window.marked.parse(md) : md;
         body.innerHTML = window.DOMPurify ? window.DOMPurify.sanitize(html) : html;
+        renderComments(slug);
       });
     }).catch(function () {
       fail("The post text could not load. Refresh the page to try again.");
