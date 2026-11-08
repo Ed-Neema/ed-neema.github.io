@@ -1,5 +1,18 @@
 [
   {
+    "slug": "rules-written-in-advance",
+    "title": "Rules Written in Advance: Reading AgentSpec as a Coding Agent Builder",
+    "date": "2026-11-08",
+    "status": "published",
+    "tags": [
+      "agent safety",
+      "coding agents",
+      "runtime enforcement",
+      "paper review"
+    ],
+    "summary": "AgentSpec enforces safety rules written before the agent runs. A close reading for coding agents, a case those rules cannot catch, and what enforcement that reasons about the task goal could look like."
+  },
+  {
     "slug": "evaluated-once-learning-forever",
     "title": "Evaluated Once, Learning Forever: How the EU AI Act Handles Systems That Keep Changing",
     "date": "2026-10-30",
