@@ -536,7 +536,7 @@
     var v = location.hash.replace("#", ""); if (VIEWS.indexOf(v) < 0) v = "start";
     state.view = v;
     Array.prototype.forEach.call(document.querySelectorAll(".view"), function (s) { s.hidden = s.getAttribute("data-view") !== v; });
-    Array.prototype.forEach.call(document.querySelectorAll(".atlas-tabs a"), function (a) { if (a.getAttribute("data-view") === v) { a.setAttribute("aria-current", "page"); a.scrollIntoView({ block: "nearest", inline: "nearest" }); } else a.removeAttribute("aria-current"); });
+    Array.prototype.forEach.call(document.querySelectorAll(".atlas-tabs a"), function (a) { if (a.getAttribute("data-view") === v) { a.setAttribute("aria-current", "page"); var row = a.parentNode; row.scrollLeft = a.offsetLeft - row.clientWidth / 2 + a.offsetWidth / 2; } else a.removeAttribute("aria-current"); });
     clearCharts();
     renderers[v]();
     drawn[v] = true;
