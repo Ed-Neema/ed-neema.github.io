@@ -1,0 +1,47 @@
+# Copies Epoch AI's benchmark data into the repo every week so the Model Atlas stays current.
+# Runs on a schedule, by hand (Actions tab > Refresh Model Atlas data > Run workflow), and when this file changes.
+name: Refresh Model Atlas data
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/atlas-data.yml"
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Epoch AI benchmark data
+        run: |
+          mkdir -p data
+          curl -fsSL --retry 3 -o /tmp/benchmark_data.zip https://epoch.ai/data/benchmark_data.zip
+          python3 -c "import zipfile; z = zipfile.ZipFile('/tmp/benchmark_data.zip'); n = z.namelist(); assert 'benchmark_metadata.csv' in n and 'model_metadata.csv' in n, 'unexpected ZIP layout'"
+          if [ -f data/benchmark_data.zip ] && cmp -s /tmp/benchmark_data.zip data/benchmark_data.zip; then
+            echo "Data unchanged"
+          else
+            cp /tmp/benchmark_data.zip data/benchmark_data.zip
+          fi
+
+      - name: Commit and publish if changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add data/benchmark_data.zip
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh Epoch AI benchmark data for the Model Atlas"
+          git push
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "Pages build request skipped"
